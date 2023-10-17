@@ -19,12 +19,12 @@
                     @foreach ($alumnos as $alumno)
                         <tr>
                             <th scope="row">{{ $alumno->id }}</th>
-                            <td >{{ $alumno->name }}</td>
+                            <td>{{ $alumno->name }}</td>
                             <td>{{ $alumno->email }}</td>
                             <td>{{ $alumno->carrera }}</td>
                             <td class="flex flex-row">
                                 <a href="{{ route('alumnos.edit', $alumno->id) }}"
-                                    class="btn btn-primary ml-2 mr-2"">Editar</a>
+                                    class="btn btn-primary ml-2 mr-2">Editar</a>
                                 <form action="{{ route('alumnos.destroy', $alumno->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
